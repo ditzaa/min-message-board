@@ -2,7 +2,7 @@ const { Router } = require("express");
 
 const indexRouter = Router();
 
-const messages = [
+let messages = [
   {
     text: "Hi there!",
     user: "Amando",
@@ -24,7 +24,10 @@ indexRouter.get("/new", (req, res) => {
 });
 
 indexRouter.post("/new", (req, res) => {
-  console.log("ce faci");
+  let { messageText, username } = req.body;
+
+  messages.push({ text: messageText, user: username, added: new Date() });
+  res.redirect("/");
 });
 
 module.exports = indexRouter;
