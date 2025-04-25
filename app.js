@@ -10,10 +10,6 @@ app.set("view engine", "ejs");
 
 app.use("/", indexRouter);
 
-app.get("/new", (req, res) => {
-  res.render("index");
-});
-
 // error handler middleware
 app.use((err, req, res, next) => {
   console.error(err);
