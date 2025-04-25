@@ -3,6 +3,16 @@
     <title>Homepage</title>
   </head>
   <body>
+    <h2><%= title %></h2>
     <h3>Homepage</h3>
+    <ul>
+      <% for (let i = 0; i < messages.length; i++) { %>
+      <li>
+        <p><%= messages[i].text %></p>
+        <h4><%= messages[i].user %></h4>
+        <h4><%= messages[i].added %></h4>
+      </li>
+      <% } %>
+    </ul>
   </body>
 </html>
