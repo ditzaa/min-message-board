@@ -1,23 +1,24 @@
 <html>
   <head>
     <title>Homepage</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
     <h2><%= title %></h2>
-    <h3>Homepage</h3>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/new">New Message</a></li>
+      </ul>
+    </nav>
+
     <ul>
       <% for (let i = 0; i < messages.length; i++) { %>
       <li>
-        <p><%= messages[i].text %></p>
         <h4><%= messages[i].user %></h4>
-        <h4><%= messages[i].added %></h4>
+        <p><%= messages[i].text %></p>
+        <!-- <h4><%= messages[i].added %></h4> -->
+        <button>Details</button>
       </li>
       <% } %>
     </ul>
