@@ -11,17 +11,17 @@ The application provides the following functionalities:
 - Basic Express routing and form handling using `express.urlencoded()` middleware.
 
 ## Clone the repository
-``
+```
 git clone https://github.com/ditzaa/mini-message-board.git
 cd mini-message-board
-``
+```
 
 ## Run the app
-``
+```
 npm init
 npm install express ejs
 node --watch app.js
-``
+```
 After that you can acces the application at `` https://localhost:3000 `` .
 Make sure you have the lastest Node.js version installed on your machine.
 
